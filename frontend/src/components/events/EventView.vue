@@ -42,11 +42,11 @@ div.row h3 {
                 <div class="col-2 text-end">
                     <div class="flex-wrap" :class="{ 'btn-group-vertical': $isMobile, 'btn-group': !$isMobile }"
                         aria-label="Event Actions">
-                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
                             :data-bs-target="'#deleteEventModal-' + event.id">
                             <font-awesome-icon icon="fa-solid fa-trash" />
                         </button>
-                        <RouterLink :to="`/events/update/${event.id}`" tag="button" class="btn btn-primary">
+                        <RouterLink :to="`/events/update/${event.id}`" tag="button" class="btn btn-outline-primary">
                             <font-awesome-icon icon="fa-solid fa-pen" />
                         </RouterLink>
                     </div>
@@ -192,7 +192,7 @@ div.row h3 {
                     <div class="card bg-light">
                         <div class="card-body d-flex flex-column">
                             <div class="card-text">
-                                <img src="/public/images/pie-chart.png" class="card-img">
+                                <img src="/images/pie-chart.png" class="card-img">
                             </div>
                         </div>
                     </div>
@@ -219,9 +219,6 @@ div.row h3 {
                     </div>
                     <div class="card-body d-flex flex-column">
                         <ObjectsIndex :event_id="event_id" :total_size="event.object_count" :page_size="10" />
-                        <div class="mt-3">
-                            <button type="button" class="w-100 btn btn-outline-primary">Add Object</button>
-                        </div>
                     </div>
                 </div>
             </div>

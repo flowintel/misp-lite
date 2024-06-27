@@ -92,13 +92,15 @@ function handleDistributionLevelUpdated(distributionLevelId) {
                   :errors="errors['attribute.distribution']" />
                 <div class="invalid-feedback">{{ errors['attribute.distribution'] }}</div>
               </div>
-              <!-- TODO -->
-              <!-- <div class="col col-6 text-start">
-                <label for="attributeType" class="form-label">Sharing Group</label>
-                <SharingGroupSelect v-model=attribute.sharing_group_id />
-                <div class="invalid-feedback">{{ errors[attribute.sharing_group_id'] }}</div>
-              </div> -->
             </div>
+            <!-- TODO -->
+            <!-- <div class="row m-2"> -->
+            <!-- <div class="col col-6 text-start">
+                  <label for="attributeSharingGroupId" class="form-label">Sharing Group</label>
+                  <SharingGroupSelect v-model=attribute.sharing_group_id />
+                  <div class="invalid-feedback">{{ errors[attribute.sharing_group_id'] }}</div>
+                </div>
+              </div> -->
             <div class="row m-2">
               <div class="col text-start">
                 <label for="attribute.value">value</label>
@@ -182,7 +184,7 @@ function handleDistributionLevelUpdated(distributionLevelId) {
           <div class="modal-footer">
             <button id="closeModalButton" type="button" data-bs-dismiss="modal" class="btn btn-secondary"
               @click="onClose()">Discard</button>
-            <button type="submit" class="btn btn-primary" :disabled="status.loading">
+            <button type="submit" class="btn btn-outline-primary" :disabled="status.loading">
               <span v-show="status.loading">
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
               </span>
